@@ -36,7 +36,7 @@ This example demonstrates how to add some values to spreadsheet cells and clear 
                 </dx:RibbonGroup>
             </Groups>
            </dx:RibbonTab>
-	    <dx:SRFileTab>
+	    <dx:SRFileTab> 
 			<Groups>		
 				<dx:SRFileCommonGroup>		
 					<Items>		
