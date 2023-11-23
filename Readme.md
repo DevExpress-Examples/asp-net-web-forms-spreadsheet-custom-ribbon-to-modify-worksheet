@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t622138/)**
 <!-- run online end -->
 
-This example demonstrates how to add some values to Spreadsheet cells and clear them when a custom button is clicked. 
+This example demonstrates how to add some values to spreadsheet cells and clear them when a custom button is clicked. 
 
 ## Implementation Details
 
