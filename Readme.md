@@ -3,17 +3,20 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T622138)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# ASPxSpreadsheet - How to add a custom ribbon button and modify an active worksheet on its click
+# Spreadsheet for ASP.NET Web Forms - How to add a custom ribbon button and modify an active worksheet on its click
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t622138/)**
 <!-- run online end -->
 
-***Note***
+This example demonstrates how to add some values to Spreadsheet cells and clear them when a custom button is clicked. 
 
-In version **19.2**, we renamed our **Range** interface to **CellRange** - see the following BC for details: [The DevExpress.Spreadsheet.Range interface has been renamed to DevExpress.Spreadsheet.CellRange](https://supportcenter.devexpress.com/ticket/details/bc5125).
+## Implementation Details
 
-The sample illustrates how to add some values to Spreadsheet cells and clear them when a custom button is clicked. <br>Steps to implement such a sample are the following: <br><br>1. Invoke the ASPxSpreadsheet designer and click the "Create Default Tabs" button. This will lead to creating default ribbon items in your markup<br><img src="https://raw.githubusercontent.com/DevExpress-Examples/aspxspreadsheet-how-to-add-a-custom-ribbon-button-and-modify-an-active-worksheet-on-its-cl-t622138/17.1.3+/media/a8995a01-5df9-4321-89b6-46210252072c.png"><br>2. Add a custom tab, group and implement your own RibbonTemplateItem with a button. Or add a ribbon item template to the existent group. In the client side event of the button, call the <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebASPxSpreadsheetScriptsASPxClientSpreadsheet_PerformCallbacktopic">ASPxClientSpreadsheet.PerformCallback</a> method to initiate a server request: <br>
+1. Invoke the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) designer and click the **Create Default Tabs** button. The designer creates default ribbon items in your markup.
+  
+![](spreadsheet-designer.png)
 
+2. Add a custom tab, group and implement your own [RibbonTemplateItem](https://docs.devexpress.com/AspNet/DevExpress.Web.RibbonTemplateItem) with a button. In the button [Click](https://docs.devexpress.com/AspNet/js-ASPxClientButton.Click) event handler, call the [ASPxClientSpreadsheet.PerformCallback](https://docs.devexpress.com/AspNet/js-ASPxClientSpreadsheet.PerformCallback(parameter)) method to initiate a server request.
 
 ```aspx
 <dx:ASPxSpreadsheet ID="ASPxSpreadsheet1" OnCallback="ASPxSpreadsheet1_Callback" ClientInstanceName="spreadSheet" runat="server" WorkDirectory="~/WorkDirectory">
@@ -33,7 +36,7 @@ The sample illustrates how to add some values to Spreadsheet cells and clear the
                 </dx:RibbonGroup>
             </Groups>
            </dx:RibbonTab>
-	   <dx:SRFileTab>
+	    <dx:SRFileTab>
 			<Groups>		
 				<dx:SRFileCommonGroup>		
 					<Items>		
@@ -46,7 +49,7 @@ The sample illustrates how to add some values to Spreadsheet cells and clear the
 						</dx:RibbonTemplateItem>		
 						<dx:SRFileNewCommand>		
 						</dx:SRFileNewCommand>		
-                                                ...
+						...
 					</Items>
 				</dx:SRFileCommonGroup>
 			</Groups>
@@ -57,7 +60,7 @@ The sample illustrates how to add some values to Spreadsheet cells and clear the
 ```
 
 
-2. Implement a logic to handle this request in the <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebASPxSpreadsheetASPxSpreadsheet_Callbacktopic">ASPxSpreadsheet.Callback</a> event handler: <br>
+3. Modify document in the [ASPxSpreadsheet.Callback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.Callback) event handler.
 
 
 ```cs
@@ -75,8 +78,9 @@ protected void ASPxSpreadsheet1_Callback(object sender, DevExpress.Web.CallbackE
 }
 ```
 
+## Files to Review
 
-
-<br/>
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 
 
