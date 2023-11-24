@@ -7,7 +7,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t622138/)**
 <!-- run online end -->
 
-This example demonstrates how to add some values to spreadsheet cells and clear them when a custom button is clicked. 
+This example demonstrates how to add values to spreadsheet cells and clear them when a custom button is clicked. 
 
 ## Implementation Details
 
@@ -15,7 +15,7 @@ This example demonstrates how to add some values to spreadsheet cells and clear 
   
 ![](spreadsheet-designer.png)
 
-2. Add a custom tab, group, and then implement a [RibbonTemplateItem](https://docs.devexpress.com/AspNet/DevExpress.Web.RibbonTemplateItem) with a button. In the button [Click](https://docs.devexpress.com/AspNet/js-ASPxClientButton.Click) event handler, call the [ASPxClientSpreadsheet.PerformCallback](https://docs.devexpress.com/AspNet/js-ASPxClientSpreadsheet.PerformCallback(parameter)) method to initiate a server request.
+2. Add a custom tab and group and then implement a [RibbonTemplateItem](https://docs.devexpress.com/AspNet/DevExpress.Web.RibbonTemplateItem) with a button. In the button [Click](https://docs.devexpress.com/AspNet/js-ASPxClientButton.Click) event handler, call the [ASPxClientSpreadsheet.PerformCallback](https://docs.devexpress.com/AspNet/js-ASPxClientSpreadsheet.PerformCallback(parameter)) method to initiate a server request.
 
 ```aspx
 <dx:ASPxSpreadsheet ID="ASPxSpreadsheet1" OnCallback="ASPxSpreadsheet1_Callback" ClientInstanceName="spreadSheet" runat="server" WorkDirectory="~/WorkDirectory">
