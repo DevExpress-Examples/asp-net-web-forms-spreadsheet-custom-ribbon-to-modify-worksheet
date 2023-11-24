@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Spreadsheet for ASP.NET Web Forms - How to add a custom ribbon button and modify an active worksheet on its click
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t622138/)**
+**[[Run Online]](https://codecentral.devexpress.com/134059977/)**
 <!-- run online end -->
 
 This example demonstrates how to add values to spreadsheet cells and clear them when a custom button is clicked. 
