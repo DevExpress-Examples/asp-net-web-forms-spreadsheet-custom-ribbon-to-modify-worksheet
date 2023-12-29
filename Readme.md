@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Spreadsheet for ASP.NET Web Forms - How to add a custom ribbon button and modify an active worksheet on its click
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/134059977/)**
-<!-- run online end -->
 
 This example demonstrates how to add values to spreadsheet cells and clear them when a custom button is clicked. 
 
