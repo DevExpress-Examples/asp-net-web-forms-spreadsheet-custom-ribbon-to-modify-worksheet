@@ -38,11 +38,12 @@ Partial Public Class _Default
 		range.Merge()
 	End Sub
 	Private Sub PrepareHeaderCells(ByVal worksheet As Worksheet)
-		Dim header As CellRange = worksheet.Range("A2:B2")
-		header(0).Value = "Type"
-		header(1).Value = "Value"
-		header.ColumnWidthInCharacters = 25
-		header.Style = worksheet.Workbook.Styles("Heading 2")
+'INSTANT VB NOTE: The variable header was renamed since Visual Basic does not handle local variables named the same as class members well:
+		Dim header_Conflict As CellRange = worksheet.Range("A2:B2")
+		header_Conflict(0).Value = "Type"
+		header_Conflict(1).Value = "Value"
+		header_Conflict.ColumnWidthInCharacters = 25
+		header_Conflict.Style = worksheet.Workbook.Styles("Heading 2")
 	End Sub
 	Private Sub InitializeDataCellsValues(ByVal worksheet As Worksheet)
 		' Add data of different types to cells.
